@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload a file</title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-top: 50px;
+			color: #1E6CA5;
+		}
+		form {
+			margin: 0 auto;
+			padding: 20px;
+			max-width: 500px;
+			background-color: #fff;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		input[type="file"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #1E6CA5;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+			font-size: 18px;
+			width: 100%;
+		}
+		input[type="submit"] {
+			background-color: #1E6CA5;
+			color: #fff;
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		input[type="submit"]:hover {
+			background-color: #0F4F8A;
+		}
+	</style>
+</head>
+<body>
+	<h1>Upload a file</h1>
+	<form action="{{ url_for('results') }}" method="POST" enctype="multipart/form-data">
+		<input type="file" name="inputFile">
+		<input type="submit" value="Upload">
+	</form>
+</body>
+</html>
