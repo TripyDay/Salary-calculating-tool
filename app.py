@@ -42,5 +42,3 @@ def results():
                            avg_of_first_column_sum=avg_of_first_column_sum,
                            sorted_xiaomi_counts=sorted_xiaomi_counts)
 
-if __name__ == '__main__':
-    app.run(debug=True)
