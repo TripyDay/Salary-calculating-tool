@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render('index.html')
 
 @app.route('/results', methods=['POST'])
 def results():
@@ -36,7 +36,7 @@ def results():
     xiaomi_counts = xiaomi_rows.groupby(df.columns[5]).size().reset_index(name='counts')
     sorted_xiaomi_counts = xiaomi_counts.sort_values(by=df.columns[5])
 
-    return render_template('results.html', 
+    return render('results.html', 
                            duplicates_count=duplicates_count,
                            sum_of_first_column=sum_of_first_column,
                            avg_of_first_column_sum=avg_of_first_column_sum,
